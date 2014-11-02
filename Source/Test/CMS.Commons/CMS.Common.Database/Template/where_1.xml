@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <operator name="and">
+    <group>
+    <column name="test1" value="6" dbtype="int" />
+    <column name="test2" value="100" dbtype="int"/>
+      <operator name="and">
+        <group>
+        <column name="test3" value="100" dbtype="int"/>
+        <column name="test4" value="100" dbtype="int"/>
+          <operator name="or">
+            <group>
+            <column name="test5" value="100" dbtype="int"/>
+            <column name="test6" value="100" dbtype="int"/>
+            </group>
+
+          </operator>
+        </group>
+      </operator>
+    </group>
+    <group>
+      <column name="test11" value="6" dbtype="int" />
+      <column name="test22" value="100" dbtype="int"/>
+      <operator name="and">
+        <group>
+          <column name="test33" value="100" dbtype="int"/>
+          <column name="test44" value="100" dbtype="int"/>
+          <operator name="or">
+            <group>
+              <column name="test55" value="100" dbtype="int"/>
+              <column name="test66" value="100" dbtype="int"/>
+            </group>
+
+          </operator>
+        </group>
+      </operator>
+    </group>
+  </operator>
+  <!--where (test1 ='aaa' and (test2='bbb' or test3=1) and test4=100)-->
+</root>

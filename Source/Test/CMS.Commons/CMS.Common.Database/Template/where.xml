@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <operator name="and">
+    <group>
+      <column name="test1" value="aaa" dbtype="string"/>
+      <operator name="or">
+        <group>
+          <column name="test2" value="bbb" dbtype="string" />
+          <column name="test3" value="1" dbtype="int" />
+          <operator name="or">
+            <group>
+            <column name="test5" value="5" dbtype="int" />
+            <column name="test6" value="6" dbtype="int" />
+            </group>
+          </operator>
+        </group>
+      </operator>
+    </group>
+    <column name="test4" value="100" dbtype="int"/>
+  </operator>
+  <!--where (test1 ='aaa' and (test2='bbb' or test3=1 or (test5=5 or test6 = 6)) and test4=100)-->
+</root>

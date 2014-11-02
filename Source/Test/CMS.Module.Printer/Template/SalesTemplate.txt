@@ -1,0 +1,12 @@
+﻿{#Include @RestInfo}
+{#Include @Entrance}
+{#Include @Employee}
+{#Include @EntranceOrder}
+
+{@RestInfo.RestName}
+-----------------------------------------------
+票号：{@EntranceOrder.SalesID}   档口：{@Entrance.EnterName}    收款员：{@Employee.Login}
+菜品                                数量                               单价                         金额
+{
+	@EntranceOrder.OrderDetail
+}

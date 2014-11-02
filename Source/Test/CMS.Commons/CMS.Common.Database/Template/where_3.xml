@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <operator name="and">
+    <group>
+      <column name="test1" value="6" dbtype="int" />
+      <column name="test2" value="6" dbtype="int" />
+    </group>
+    <column name="test3" value="6" dbtype="int" />
+  </operator>
+  
+  <!--where (test1 =6 and test2=100) and test3=100-->
+</root>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="UpdatesCheckingLog" targetNamespace="http://tempuri.org/UpdatesCheckingLog.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/UpdatesCheckingLog.xsd" xmlns:mstns="http://tempuri.org/UpdatesCheckingLog.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="UpdatesCheckingLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Section" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+            </xs:sequence>
+            <xs:attribute name="Name" type="xs:string" use="required" />
+            <xs:attribute name="IsSchema" type="xs:boolean" use="required" />
+            <xs:attribute name="LastChecked" type="xs:dateTime" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

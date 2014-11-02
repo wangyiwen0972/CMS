@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Model name="Dish">
+  <Columns>
+    <Column name="GUID">
+      <Vaule dbtype="uniquentifier">123123-12312312-12312312-12312</Vaule>
+    </Column>
+    <Column name="UnitGUID">
+      <Value dbtype="uniquentifier">
+        123123-12312312-12312312-12312
+      </Value>
+    </Column>
+  </Columns>
+</Model>

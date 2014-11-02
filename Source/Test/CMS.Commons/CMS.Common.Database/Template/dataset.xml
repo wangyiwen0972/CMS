@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Attribute">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AttributeGuid" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" />
+                <xs:element name="AttributeEName" type="xs:string" minOccurs="0" />
+                <xs:element name="AttributeCName" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="AttributeEnum">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Guid" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" />
+                <xs:element name="AttributeGuid" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" />
+                <xs:element name="EnumValue" type="xs:string" minOccurs="0" />
+                <xs:element name="EnumCode" type="xs:string" minOccurs="0" />
+                <xs:element name="Remark" type="xs:string" minOccurs="0" />
+                <xs:element name="CreatedBy" type="xs:string" minOccurs="0" />
+                <xs:element name="CreateDate" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="ChangedBy" type="xs:string" minOccurs="0" />
+                <xs:element name="ChangedDate" type="xs:dateTime" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1">
+        <xs:selector xpath=".//Attribute" />
+        <xs:field xpath="AttributeGuid" />
+      </xs:unique>
+      <xs:keyref name="Attribute_AttributeEmun" refer="Constraint1">
+        <xs:selector xpath=".//AttributeEnum" />
+        <xs:field xpath="AttributeGuid" />
+      </xs:keyref>
+    </xs:element>
+  </xs:schema>
+  <Attribute>
+    <AttributeGuid>b160db2a-f1a3-49fc-93f4-1b24ad0cddd8</AttributeGuid>
+    <AttributeEName>Operator</AttributeEName>
+    <AttributeCName>操作</AttributeCName>
+  </Attribute>
+  <Attribute>
+    <AttributeGuid>ea632bce-ccda-4a8e-a642-227de90bd25e</AttributeGuid>
+    <AttributeEName>CustomerStatus</AttributeEName>
+    <AttributeCName>客户状态</AttributeCName>
+  </Attribute>
+  <Attribute>
+    <AttributeGuid>f43dbe54-c5df-4f26-99ee-2b1579b5f731</AttributeGuid>
+    <AttributeEName>DishType</AttributeEName>
+    <AttributeCName>菜品大类</AttributeCName>
+  </Attribute>
+  <Attribute>
+    <AttributeGuid>41c9ac72-f017-4867-8696-2c361d1865b7</AttributeGuid>
+    <AttributeEName>CardStatus</AttributeEName>
+    <AttributeCName>卡片状态</AttributeCName>
+  </Attribute>
+  <Attribute>
+    <AttributeGuid>8e820505-fb4f-45d3-b563-3a6ef30f3533</AttributeGuid>
+    <AttributeEName>InvoiceStatus</AttributeEName>
+    <AttributeCName>发票状态</AttributeCName>
+  </Attribute>
+  <Attribute>
+    <AttributeGuid>10dbc541-5fe0-4733-b81c-577215c936b2</AttributeGuid>
+    <AttributeEName>DishStyle</AttributeEName>
+    <AttributeCName>菜系</AttributeCName>
+  </Attribute>
+  <Attribute>
+    <AttributeGuid>0d97dbbf-9475-41ac-93ea-8c5996e30008</AttributeGuid>
+    <AttributeEName>RestStatus</AttributeEName>
+    <AttributeCName>餐厅状态</AttributeCName>
+  </Attribute>
+  <Attribute>
+    <AttributeGuid>d18b5c03-e90f-4d03-ac21-90fad43f55b7</AttributeGuid>
+    <AttributeEName>Right</AttributeEName>
+    <AttributeCName>权限</AttributeCName>
+  </Attribute>
+  <Attribute>
+    <AttributeGuid>70da32a6-9863-49cb-94a9-9269c2b95a0a</AttributeGuid>
+    <AttributeEName>ShopHours</AttributeEName>
+    <AttributeCName>菜品分市类型</AttributeCName>
+  </Attribute>
+  <Attribute>
+    <AttributeGuid>d204b028-78e4-45e2-8709-aaf990b631d0</AttributeGuid>
+    <AttributeEName>TableStatus</AttributeEName>
+    <AttributeCName>餐桌状态</AttributeCName>
+  </Attribute>
+  <Attribute>
+    <AttributeGuid>fe1ded5f-06c8-4f5f-934c-cd2e6e2afcd9</AttributeGuid>
+    <AttributeEName>OrderStatus</AttributeEName>
+    <AttributeCName>订单状态</AttributeCName>
+  </Attribute>
+  <Attribute>
+    <AttributeGuid>8171db95-fd96-42f1-bfe1-dbd020bb3ddc</AttributeGuid>
+    <AttributeEName>StatusType</AttributeEName>
+    <AttributeCName>状态类型</AttributeCName>
+  </Attribute>
+  <Attribute>
+    <AttributeGuid>25558baa-2eb0-482c-9242-e0d97f3297f5</AttributeGuid>
+    <AttributeEName>EmployeeStatus</AttributeEName>
+    <AttributeCName>职员状态</AttributeCName>
+  </Attribute>
+  <Attribute>
+    <AttributeGuid>903fa1e2-34c3-49af-b181-e1acdfe919c0</AttributeGuid>
+    <AttributeEName>CookType</AttributeEName>
+    <AttributeCName>烧法类型</AttributeCName>
+  </Attribute>
+  <Attribute>
+    <AttributeGuid>1aca1b13-3db8-4943-9b89-ed3290953838</AttributeGuid>
+    <AttributeEName>DishStatus</AttributeEName>
+    <AttributeCName>菜品状态</AttributeCName>
+  </Attribute>
+  <AttributeEnum>
+    <Guid>f9b42692-b269-4804-a674-4ac5d1dbc4e5</Guid>
+    <AttributeGuid>b160db2a-f1a3-49fc-93f4-1b24ad0cddd8</AttributeGuid>
+    <EnumValue>Select</EnumValue>
+    <EnumCode>1001</EnumCode>
+  </AttributeEnum>
+  <AttributeEnum>
+    <Guid>ffc80725-93d7-49e4-a3cd-6ec37bd24552</Guid>
+    <AttributeGuid>b160db2a-f1a3-49fc-93f4-1b24ad0cddd8</AttributeGuid>
+    <EnumValue>Update</EnumValue>
+    <EnumCode>1002</EnumCode>
+  </AttributeEnum>
+  <AttributeEnum>
+    <Guid>2089b900-005b-4bb1-93d7-a3045850fed5</Guid>
+    <AttributeGuid>b160db2a-f1a3-49fc-93f4-1b24ad0cddd8</AttributeGuid>
+    <EnumValue>Insert</EnumValue>
+    <EnumCode>1003</EnumCode>
+  </AttributeEnum>
+  <AttributeEnum>
+    <Guid>d9a8503a-d866-4ba7-88d3-ac1407638c03</Guid>
+    <AttributeGuid>b160db2a-f1a3-49fc-93f4-1b24ad0cddd8</AttributeGuid>
+    <EnumValue>Delete</EnumValue>
+    <EnumCode>1004</EnumCode>
+  </AttributeEnum>
+  <AttributeEnum>
+    <Guid>e042c875-bef1-4f71-b90b-d396331f4af6</Guid>
+    <AttributeGuid>8171db95-fd96-42f1-bfe1-dbd020bb3ddc</AttributeGuid>
+    <EnumValue>DishType</EnumValue>
+    <CreatedBy>admin</CreatedBy>
+    <ChangedBy>admin</ChangedBy>
+  </AttributeEnum>
+</NewDataSet>

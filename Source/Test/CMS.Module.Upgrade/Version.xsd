@@ -1,0 +1,8 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="Version" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="Version">
+    <xs:complexType>
+      <xs:attribute name="InstalledVersion" type="xs:int" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

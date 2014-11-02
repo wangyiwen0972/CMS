@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{333D1887-9CF0-4791-A5D0-4DD66CDFFFA9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMS.Commons.ViewResult</RootNamespace>
+    <AssemblyName>CMS.Common.ViewResult</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\ActionResultBase.cs" />
+    <Compile Include="Base\ActionResultCollectionBase.cs" />
+    <Compile Include="Core\ActionResult.cs" />
+    <Compile Include="Core\BooleanResult.cs" />
+    <Compile Include="Core\CollectionResult.cs" />
+    <Compile Include="Core\ContentResult.cs" />
+    <Compile Include="Core\JSONResult.cs" />
+    <Compile Include="Core\UIResult.cs" />
+    <Compile Include="Core\XMLCollectionResults.cs" />
+    <Compile Include="Core\XMLResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CMS.Common.Utility\CMS.Common.Utility.csproj">
+      <Project>{58c948e7-88ee-4629-afb7-7898ef7e9b39}</Project>
+      <Name>CMS.Common.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CMS.Interface.Module\CMS.Interface.Module.csproj">
+      <Project>{2ae3e6a3-9800-4cc5-98ac-d4e3f8cdd5de}</Project>
+      <Name>CMS.Interface.Module</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CMS.Interfaces\CMS.Interface.Model\CMS.Interface.Model.csproj">
+      <Project>{77b7442e-3021-42c9-88ee-70d3abaa3424}</Project>
+      <Name>CMS.Interface.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

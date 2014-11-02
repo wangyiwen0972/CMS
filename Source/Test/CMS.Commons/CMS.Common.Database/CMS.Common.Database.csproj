@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5C68D8A3-B000-483F-8A51-EC919F45FC9C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMS.Common.Database</RootNamespace>
+    <AssemblyName>CMS.Common.Database</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attribute\DBColumnAttribute.cs" />
+    <Compile Include="Attribute\DBTableAttribute.cs" />
+    <Compile Include="Base\BaseCache.cs" />
+    <Compile Include="Base\BaseCommand.cs" />
+    <Compile Include="Base\BaseConnection.cs" />
+    <Compile Include="Base\BaseContext.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Core\DBCache.cs" />
+    <Compile Include="Core\DBCacheManager.cs" />
+    <Compile Include="Core\DBCommandFactory.cs" />
+    <Compile Include="Core\DBConnection.cs" />
+    <Compile Include="Core\DBContext.cs" />
+    <Compile Include="Core\DeleteCommand.cs" />
+    <Compile Include="Core\InsertCommand.cs" />
+    <Compile Include="Core\SelectCommand.cs" />
+    <Compile Include="Core\Structure\DBColumn.cs" />
+    <Compile Include="Core\Structure\DBCondition.cs" />
+    <Compile Include="Core\Structure\DBFilter.cs" />
+    <Compile Include="Core\Structure\DBGroup.cs" />
+    <Compile Include="Core\Structure\DBProcedure.cs" />
+    <Compile Include="Core\Structure\DBTable.cs" />
+    <Compile Include="Core\UpdateCommand.cs" />
+    <Compile Include="Emun\Status.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CMS.Common.Utility\CMS.Common.Utility.csproj">
+      <Project>{58c948e7-88ee-4629-afb7-7898ef7e9b39}</Project>
+      <Name>CMS.Common.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CMS.Interfaces\CMS.Interface.Model\CMS.Interface.Model.csproj">
+      <Project>{77b7442e-3021-42c9-88ee-70d3abaa3424}</Project>
+      <Name>CMS.Interface.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CMS.Common.Model\CMS.Common.Model.csproj">
+      <Project>{ed9f07b0-0a53-40ac-9d05-95cb6ab65773}</Project>
+      <Name>CMS.Common.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Template\dataset.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Template\model.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Template\where.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

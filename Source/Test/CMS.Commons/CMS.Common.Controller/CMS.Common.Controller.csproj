@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C96B6CBD-601E-4BDB-A3F9-F16C22C748B8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMS.Common.Controller</RootNamespace>
+    <AssemblyName>CMS.Common.Controller</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BaseController.cs" />
+    <Compile Include="Base\PaymentControllerBase.cs" />
+    <Compile Include="Core\AttributeEnumController.cs" />
+    <Compile Include="Core\CardController.cs" />
+    <Compile Include="Core\CustomerController.cs" />
+    <Compile Include="Core\DepartmentController.cs" />
+    <Compile Include="Core\DishController.cs" />
+    <Compile Include="Core\DishTableController.cs" />
+    <Compile Include="Core\EmployeeController.cs" />
+    <Compile Include="Core\EntranceController.cs" />
+    <Compile Include="Core\MachineController.cs" />
+    <Compile Include="Core\OrderController.cs" />
+    <Compile Include="Core\PrinterController.cs" />
+    <Compile Include="Manage\ControllerManage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Base\UserControllerBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CMS.Common.Utility\CMS.Common.Utility.csproj">
+      <Project>{58c948e7-88ee-4629-afb7-7898ef7e9b39}</Project>
+      <Name>CMS.Common.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CMS.Interface.Module\CMS.Interface.Module.csproj">
+      <Project>{2ae3e6a3-9800-4cc5-98ac-d4e3f8cdd5de}</Project>
+      <Name>CMS.Interface.Module</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CMS.Interfaces\CMS.Interface.Controller\CMS.Interface.Controller.csproj">
+      <Project>{6dc17ba3-c204-40c2-a9b7-93133e0db708}</Project>
+      <Name>CMS.Interface.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CMS.Interfaces\CMS.Interface.Model\CMS.Interface.Model.csproj">
+      <Project>{77b7442e-3021-42c9-88ee-70d3abaa3424}</Project>
+      <Name>CMS.Interface.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CMS.Module.CardMachine\CMS.Module.CardMachine.csproj">
+      <Project>{4b10c715-4987-4826-85cf-7f19747e8b6c}</Project>
+      <Name>CMS.Module.CardMachine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CMS.Common.Database\CMS.Common.Database.csproj">
+      <Project>{5c68d8a3-b000-483f-8a51-ec919f45fc9c}</Project>
+      <Name>CMS.Common.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CMS.Common.Model\CMS.Common.Model.csproj">
+      <Project>{ed9f07b0-0a53-40ac-9d05-95cb6ab65773}</Project>
+      <Name>CMS.Common.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CMS.Common.ViewResult\CMS.Common.ViewResult.csproj">
+      <Project>{333d1887-9cf0-4791-a5d0-4dd66cdfffa9}</Project>
+      <Name>CMS.Common.ViewResult</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

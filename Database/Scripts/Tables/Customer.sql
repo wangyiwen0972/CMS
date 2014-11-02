@@ -1,0 +1,33 @@
+USE [CMS]
+GO
+
+/****** Object:  Table [dbo].[Customer]    Script Date: 2013/10/21 17:35:00 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Customer](
+	[ID] [uniqueidentifier] NOT NULL,
+	[Login] [nvarchar](50) NULL,
+	[Password] [nvarchar](50) NULL,
+	[FullName] [nvarchar](20) NULL,
+	[Sex] [bit] NULL,
+	[Telephone] [nvarchar](20) NULL,
+	[Address] [nvarchar](50) NULL,
+	[Age] [int] NULL,
+	[Points] [int] NULL,
+	[StatusID] [uniqueidentifier] NULL,
+	[CreatedBy] [nvarchar](50) NULL,
+	[CreateDate] [datetime] NULL,
+	[ChangedBy] [nvarchar](50) NULL,
+	[ChangedDate] [datetime] NULL,
+ CONSTRAINT [PK_Customer] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+

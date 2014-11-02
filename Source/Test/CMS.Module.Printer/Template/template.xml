@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <order name="O111" sales="S111" operator="Stephen" date="2014-3-11" entrance="E111" machine="M111" amount="100.00" >
+    <dish name="D1">
+      <price>10.00</price>
+      <quantity>1</quantity>
+      <amount>10.00</amount>
+      <unit>U1</unit>
+    </dish>
+    <dish name="D2">
+      <price>5.00</price>
+      <quantity>3</quantity>
+      <amount>15.00</amount>
+      <unit>U2</unit>
+    </dish>
+    <dish name="D3">
+      <price>15.00</price>
+      <quantity>1</quantity>
+      <amount>15.00</amount>
+      <unit>U3</unit>
+    </dish>
+  </order>
+</root>

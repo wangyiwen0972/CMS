@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{71B0F691-5A0A-483F-8294-79B12804E3C4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMS.WinForms.OOSDishesSet</RootNamespace>
+    <AssemblyName>CMS.WinForms.OOSDish</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OOSDishesSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OOSDishesSet.Designer.cs">
+      <DependentUpon>OOSDishesSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="OOSDishesSet.resx">
+      <DependentUpon>OOSDishesSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CMS.Commons\CMS.Common.Controller\CMS.Common.Controller.csproj">
+      <Project>{c96b6cbd-601e-4bdb-a3f9-f16c22c748b8}</Project>
+      <Name>CMS.Common.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CMS.Commons\CMS.Common.Model\CMS.Common.Model.csproj">
+      <Project>{ed9f07b0-0a53-40ac-9d05-95cb6ab65773}</Project>
+      <Name>CMS.Common.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CMS.Commons\CMS.Common.ViewResult\CMS.Common.ViewResult.csproj">
+      <Project>{333d1887-9cf0-4791-a5d0-4dd66cdfffa9}</Project>
+      <Name>CMS.Common.ViewResult</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CMS.Interface.Module\CMS.Interface.Module.csproj">
+      <Project>{2ae3e6a3-9800-4cc5-98ac-d4e3f8cdd5de}</Project>
+      <Name>CMS.Interface.Module</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CMS.Interfaces\CMS.Interface.Controller\CMS.Interface.Controller.csproj">
+      <Project>{6dc17ba3-c204-40c2-a9b7-93133e0db708}</Project>
+      <Name>CMS.Interface.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CMS.Interfaces\CMS.Interface.Model\CMS.Interface.Model.csproj">
+      <Project>{77b7442e-3021-42c9-88ee-70d3abaa3424}</Project>
+      <Name>CMS.Interface.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CMS.Module.Shell\CMS.Module.Shell.csproj">
+      <Project>{501e3b09-9450-4fb7-a947-7a755aa4466c}</Project>
+      <Name>CMS.Module.Shell</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CMS.Winforms.OSK\CMS.WinForms.OSK.csproj">
+      <Project>{d91501b8-cce6-4d18-af77-68d6ccef9fb5}</Project>
+      <Name>CMS.WinForms.OSK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

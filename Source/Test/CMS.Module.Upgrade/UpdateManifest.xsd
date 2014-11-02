@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="UpdateManifest" elementFormDefault="qualified" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="UpdateManifest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Delete" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Path" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="Version" type="xs:int" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
